@@ -2,6 +2,7 @@ import { NextPage } from "next"
 import Link from "next/link"
 import { SetStateAction, useState } from "react"
 import Form from "../components/Form/Form"
+import WonderingViking from "../components/svgs/wonderingViking"
 import Topbar from "../components/Topbar/Topbar"
 import styles from '../styles/Signin.module.css'
 const Signin:NextPage = () => {
@@ -39,6 +40,7 @@ const Signin:NextPage = () => {
               inputs={inputs}
               handleSubmit={handleSubmit}
               handleSignInGoogle={handleSignInGoogle}
+              svg = {<WonderingViking/>}
             />
         </main>
     </div>

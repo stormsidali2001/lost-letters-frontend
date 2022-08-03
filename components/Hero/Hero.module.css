@@ -3,6 +3,9 @@
 }
 .container .left{
     flex:1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 .container .center svg{
     height: calc(100vh - var(--topbar-height) );
@@ -20,4 +23,10 @@
 
 .container .right{
     flex:1;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+}
+.container .right svg{
+    margin: auto;
 }

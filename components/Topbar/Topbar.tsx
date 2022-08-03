@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import styles from './Topbar.module.css'
 const Topbar = () => {
   return (
@@ -12,8 +13,8 @@ const Topbar = () => {
         </div>
         <div className={styles.right}>
             <ul>
-                <li>Signin</li>
-                <li>Signup</li>
+                <li><Link href='/signin'>Signin</Link></li>
+                <li><Link href='/signup'>Signup</Link></li>
             </ul>
         </div>
     </div>

@@ -1,4 +1,5 @@
 import styles from './Hero.module.css'
+import * as gsap from 'gsap'
 const Hero = () => {
   const topWord = 'LOST';
   const downWord = 'LETTERS';

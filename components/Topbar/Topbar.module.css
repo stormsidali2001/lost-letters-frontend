@@ -22,6 +22,9 @@
     align-items: center;
     font-size: 18px;
 }
+.container .left ul li {
+    cursor: pointer;
+}
 .container .left .logo{
     font-weight: bold;
     display: flex;
@@ -39,4 +42,7 @@
     margin-left: auto;
     align-items: center;
     font-size: 18px;
+}
+.container .right ul li {
+    cursor: pointer;
 }

@@ -4,8 +4,8 @@ const Hero = () => {
   const downWord = 'LETTERS';
   return (
     <div className={styles.container}>
-      
-            <div className={styles.word}>
+          
+            <div className={`${styles.word} ${styles.firstWord}`}>
                 {
                   topWord.split('').map(ch=>{
                     return (
@@ -14,7 +14,7 @@ const Hero = () => {
                   })
                 }
             </div>
-            <div className={styles.word}>
+            <div className={`${styles.word} ${styles.secondWord}`}>
             {
                   downWord.split('').map(ch=>{
                     return (
@@ -359,6 +359,11 @@ const Hero = () => {
 
 
         </div>
+        {/*Mouse icon */}
+        <svg className={styles.mouse} width="41" height="74" viewBox="0 0 41 74" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="1.13265" y="1.13265" width="37.7551" height="71.7347" rx="18.8776" stroke="#4D524B" stroke-width="2.26531"/>
+              <circle cx="20.3877" cy="53.6123" r="6.79592" fill="#4D524B"/>
+        </svg>
     </div>
   )
 }

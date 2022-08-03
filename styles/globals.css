@@ -3,6 +3,7 @@
   --primary-900:#90C8AC;
   --background:#F5F0BB;
   --text-color:#4D524B;
+  --text-color-secondary:#525252;
   --topbar-height:60px;
   --letter-bg:rgba(115, 169, 173, 0.4);
   --form-bg:rgba(251, 243, 241, 0.63);
@@ -38,4 +39,9 @@ a {
 
 ul{
   list-style: none;
+}
+
+input{
+  outline: none;
+  border: none;
 }

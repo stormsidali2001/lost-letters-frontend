@@ -3,7 +3,7 @@ import Link from "next/link"
 import { SetStateAction, useState } from "react"
 import Form from "../components/Form/Form"
 import Topbar from "../components/Topbar/Topbar"
-import styles from '../styles/Signup.module.css'
+import styles from '../styles/Signin.module.css'
 const Signin:NextPage = () => {
   const [email,setEmail] = useState<string>('');
   const [password,setPassword] = useState<string>('');

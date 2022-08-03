@@ -5,7 +5,11 @@
   .container .main{
     display: flex;
     flex-direction: column;
-    min-height: 100vh;
+    width: 100vw;
+    height: calc(100vh - var(--topbar-height) );
     background-color: var(--background);
+    justify-content: center;
+    align-items: center;
+
   
   }

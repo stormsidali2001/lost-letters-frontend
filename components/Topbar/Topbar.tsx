@@ -4,7 +4,7 @@ const Topbar = () => {
   return (
     <div className={styles.container}>
         <div className={styles.left}>
-            <span className={styles.logo}>Lost.Letters</span>
+            <span className={styles.logo}><Link href='/'>Lost.Letters</Link></span>
             <ul className={styles.links}>
                 <li>Overview</li>
                 <li>About</li>

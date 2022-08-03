@@ -1,6 +1,7 @@
 .container{
     display: flex;
     position: relative;
+    height: calc(100vh - var(--topbar-height) );
 }
 
 .container .left{
@@ -14,7 +15,7 @@
     height: 60%;
 }
 .container .center svg{
-    height: calc(100vh - var(--topbar-height) );
+    height: 100%;
 }
 .container .center svg text{
     font-weight: bold;

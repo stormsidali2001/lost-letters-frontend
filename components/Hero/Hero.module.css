@@ -7,6 +7,10 @@
     align-items: center;
     justify-content: center;
 }
+.container .left svg{
+    width: 60%;
+    height: 60%;
+}
 .container .center svg{
     height: calc(100vh - var(--topbar-height) );
 }
@@ -29,4 +33,6 @@
 }
 .container .right svg{
     margin: auto;
+    width: 60%;
+    height: 60%;
 }

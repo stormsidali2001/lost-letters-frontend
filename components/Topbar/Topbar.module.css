@@ -1,0 +1,42 @@
+.container{
+    background-color: var(--primary-900);
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    color: var(--text-color);
+    padding: 0 20px;
+    
+
+}
+
+.container .left{
+    flex: 1;
+    display: flex;
+    column-gap: 40px;
+}
+.container .left ul{
+    display: flex;
+    font-weight: 500;
+    column-gap: 15px;
+    height: 100%;
+    align-items: center;
+    font-size: 18px;
+}
+.container .left .logo{
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    font-size: 22px;
+}
+.container .right{
+    flex:1;
+}
+.container .right ul{
+    height: 100%;
+    width: fit-content;
+    display: flex;
+    column-gap: 15px;
+    margin-left: auto;
+    align-items: center;
+    font-size: 18px;
+}

@@ -2,7 +2,8 @@
 :root{
   --primary-900:#90C8AC;
   --background:#F5F0BB;
-  --text-color:#4D524B
+  --text-color:#4D524B;
+  --topbar-height:60px;
 }
 html,
 body {

@@ -1,0 +1,23 @@
+.container{
+    display: flex;
+}
+.container .left{
+    flex:1;
+}
+.container .center svg{
+    height: calc(100vh - var(--topbar-height) );
+}
+.container .center svg text{
+    font-weight: bold;
+    paint-order: stroke fill;
+    fill:none;
+    font-size: 86px;
+    fill:#202022;
+    stroke-width: 8px;
+    stroke-linejoin: round;
+    stroke:#73A9AD;
+}
+
+.container .right{
+    flex:1;
+}

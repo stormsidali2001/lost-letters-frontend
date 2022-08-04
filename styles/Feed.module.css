@@ -1,6 +1,7 @@
 .container {
     flex-direction: column;
     background-color: var(--background);
+    overflow: hidden;
   }
   
   .container .main{
@@ -8,6 +9,9 @@
     width: 100vw;
     min-height: calc(100vh - var(--topbar-height) );
     justify-content: center;
-    align-items: center;
+    position: relative;
+    padding: 10px;
+    overflow-y: scroll;
+    padding-top:calc(var(--topbar-height) + 10px);
   
   }

@@ -22,7 +22,6 @@
     padding: 1px 20px;
     border-bottom-left-radius: 10px;
     border-top-left-radius: 10px;
-
 }
 .container .links .link:hover,.container .links .link label:hover  {
     background-color: rgb(221, 211, 211);

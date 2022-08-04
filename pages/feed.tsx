@@ -6,7 +6,9 @@ const Feed:NextPage = () => {
     <div  className={styles.container}>
         <TopbarUser/>
         <main className={styles.main}>
-            
+            <Leftbar/>
+            <Posts/>
+            <Rightbar/>
         </main>
     </div>
   )

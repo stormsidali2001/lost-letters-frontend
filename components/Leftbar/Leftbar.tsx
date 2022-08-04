@@ -31,9 +31,17 @@ const Leftbar = () => {
   return (
     <div className={styles.container}>
         <ul className={styles.links}>
-            <li className={styles.link}>
-                
-            </li>
+            {
+                links.map(({text,icon},index)=>{
+                    return (
+                        <li key={index} className={styles.link}>
+                            {icon}
+                            <label>{text}</label>
+                        </li>
+                    )
+                })
+            }
+         
         </ul>
     </div>
   )

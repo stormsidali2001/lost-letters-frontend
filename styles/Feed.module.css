@@ -1,0 +1,15 @@
+.container {
+    flex-direction: column;
+    background-color: var(--background);
+  }
+  
+  .container .main{
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    height: calc(100vh - var(--topbar-height) );
+    justify-content: center;
+    align-items: center;
+
+  
+  }

@@ -8,6 +8,9 @@
     backdrop-filter: blur(2px);
     border-bottom-right-radius: 5px;
     border-top-right-radius: 5px;
+ 
+    
+    
 }
 .container .links{
     display: flex;

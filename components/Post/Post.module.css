@@ -1,0 +1,42 @@
+.container{
+    background-color: var(--form-bg);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    padding: 10px 15px;
+}
+.container .user{
+    display: flex;
+    column-gap:10px;
+}
+.container .user .profilImg{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+.container .user .infos{
+    display: flex;
+    flex-direction: column;
+  
+}
+.container .user .infos .username{
+    color:var(--text-color);
+    font-weight: 600;
+    font-size: 15px;
+}
+.container .user .infos  .date{
+    color:var(--text-color);
+    font-size: 11px;
+    font-weight: 500;
+}
+
+.container .content{
+    display: flex;
+    flex-direction: column;
+
+}
+.container .content .text{
+    word-break: break-all;
+    white-space: pre-wrap; /*allow inserting a new line using \n\r*/
+}

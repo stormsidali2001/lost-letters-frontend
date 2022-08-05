@@ -1,7 +1,9 @@
 import styles from './FriendSuggestions.module.css';
 const FriendsSuggestions = () => {
   return (
-    <div>FriendsSuggestions</div>
+    <div className={styles.container}>
+
+    </div>
   )
 }
 

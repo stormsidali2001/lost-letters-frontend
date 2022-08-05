@@ -1,0 +1,17 @@
+.container {
+    flex-direction: column;
+    background-color: var(--background);
+    overflow: hidden;
+  }
+  
+  .container .main{
+    display: flex;
+    width: 100vw;
+    min-height: 100vh;
+    justify-content: center;
+    position: relative;
+    padding: 10px;
+    overflow-y: scroll;
+    padding-top:calc(var(--topbar-height) + 10px);
+  
+  }

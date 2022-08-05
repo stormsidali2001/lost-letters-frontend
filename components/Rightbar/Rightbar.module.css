@@ -1,10 +1,17 @@
 .container{
+   
+    flex:1;
+    flex-shrink: 1;
+    padding: 0 10px;
+
+ 
+}
+.wrapper{
     background-color: var(--form-bg);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     width: 300px;
-    height: 60vh;
+    height: calc(100vh - var(--topbar-height) - 10px);
     position: fixed;
-    right: 20px;
-    top:calc(50% + var(--topbar-height)/2);
-    transform: translate(0,-50%);
-}
+  
+
+}   

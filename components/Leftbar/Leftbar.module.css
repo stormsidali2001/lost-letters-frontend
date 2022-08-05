@@ -1,27 +1,24 @@
 .container{
+    flex:1;
+}
+.wrapper{
     background-color: var(--form-bg);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    width: fit-content;
-    height: 80vh;
-    padding: 15px 0px;
-    padding-left: 5px;
-    backdrop-filter: blur(2px);
+    position: fixed;    
     border-bottom-right-radius: 5px;
     border-top-right-radius: 5px;
-    position: fixed;
-    left: 0;
-    top:calc(50% + var(--topbar-height)/2);
-    transform: translate(0,-50%);
- 
-    
-    
+    height: calc(100vh - var(--topbar-height) - 10px);
+    padding: 15px 0px;
+    padding-left: 5px;
+  
+
 }
-.container .links{
+.container .wrapper .links{
     display: flex;
     flex-direction: column;
     row-gap:10px;
 }
-.container .links .link{
+.container .wrapper .links .link{
     display: flex;
     align-items: center;
     column-gap:10px;
@@ -30,7 +27,7 @@
     border-bottom-left-radius: 10px;
     border-top-left-radius: 10px;
 }
-.container .links .link:hover,.container .links .link label:hover  {
+.container .wrapper .links .link:hover,.container .links .link label:hover  {
     background-color: rgb(221, 211, 211);
     cursor: pointer;
 

@@ -4,6 +4,7 @@ import styles from './Posts.module.css';
 const Posts = () => {
   return (
     <div className={styles.container}>
+      <div className={styles.wrapper}>
         <NewPost/>
         <Post
           username='Assoul Sidali'
@@ -101,6 +102,7 @@ Notice  Period : Immediate to 30 Days
 Must have Skills (2+ Years) : Codelgniter , JavaScript, OOPS .
           `}
         />
+      </div>
     </div>
   )
 }

@@ -18,8 +18,10 @@ const ProfilCard = ({fullname,description,profilImageUrl,coverImgUrl,isOnline}:P
                     }
                 </div>
                 <div className={styles.imageContainer}>
+                    <div className={styles.wrapper}>
                     <img src={profilImageUrl}/>
-                    <div className={`${styles.onlineCircle} ${isOnline ? styles.online: styles.offline}`}></div>
+                    <div className={`${styles.onlineIndicator} ${isOnline ? styles.online: styles.offline}`}></div>
+                    </div>
                 </div>
             </div>
             <div className={styles.title}>{fullname}</div>

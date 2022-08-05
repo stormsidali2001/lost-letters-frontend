@@ -1,5 +1,7 @@
 .container{
     flex:1;
+    min-width: 25%;
+
 }
 .wrapper{
     background-color: var(--form-bg);
@@ -10,7 +12,6 @@
     height: calc(100vh - var(--topbar-height) - 10px);
     padding: 15px 0px;
     padding-left: 5px;
-  
 
 }
 .container .wrapper .links{

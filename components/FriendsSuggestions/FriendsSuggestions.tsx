@@ -7,62 +7,61 @@ const FriendsSuggestions = () => {
       fullname:'Julian Wan',
       profilImgUrl:'Julian Wan.jpg',
       description:"descriptive text about me this text is supposed to introduce my self brievely",
-      coverImgUrl:'',
+      coverImgUrl:'/cover-nature.jpg',
       isOnline:Math.random() > 0.5 ? true:false
     },
     {
       fullname:'Ludovic Migneault',
       profilImgUrl:'Ludovic Migneault.jpg',
       description:"descriptive text about me this text is supposed to introduce my self brievely",
-      coverImgUrl:'',
       isOnline:Math.random() > 0.5 ? true:false
     },
     {
       fullname:'Kier In Sight',
       profilImgUrl:'Kier In Sight.jpg',
       description:"descriptive text about me this text is supposed to introduce my self brievely",
-      coverImgUrl:'',
+      coverImgUrl:'/cover-town.jpg',
       isOnline:Math.random() > 0.5 ? true:false
     },
     {
       fullname:'Vicky Hladynets',
       profilImgUrl:'Vicky Hladynets.jpg',
       description:"descriptive text about me this text is supposed to introduce my self brievely",
-      coverImgUrl:'',
+      coverImgUrl:'/cover-moon.jpg',
       isOnline:Math.random() > 0.5 ? true:false
     },
     {
       fullname:'Albert Dera',
       profilImgUrl:'Albert Dera.jpg',
       description:"descriptive text about me this text is supposed to introduce my self brievely",
-      coverImgUrl:'',
+      coverImgUrl:'/cover-nature.jpg',
       isOnline:Math.random() > 0.5 ? true:false
     },
     {
       fullname:'ian dooley',
       profilImgUrl:'ian dooley.jpg',
       description:"descriptive text about me this text is supposed to introduce my self brievely",
-      coverImgUrl:'',
       isOnline:Math.random() > 0.5 ? true:false
     },
     {
       fullname:'Darshan Patel',
       profilImgUrl:'Darshan Patel.jpg',
       description:"descriptive text about me this text is supposed to introduce my self brievely",
-      coverImgUrl:'',
+      coverImgUrl:'cover-town.jpg',
       isOnline:Math.random() > 0.5 ? true:false
     },
     {
       fullname:'Petr Sevcovic',
       profilImgUrl:'Petr Sevcovic',
       description:"descriptive text about me this text is supposed to introduce my self brievely",
-      coverImgUrl:'',
+      coverImgUrl:'cover-moon.jpg',
       isOnline:Math.random() > 0.5 ? true:false
     }
 
   ]
   return (
     <div className={styles.container}>
+      <div className={styles.wrapper}>
         <div className={styles.headingContainer}>
             <AddFriendIcon/>
             <span className={styles.heading}>Suggestions</span>
@@ -81,6 +80,7 @@ const FriendsSuggestions = () => {
                 )
               })
             }
+        </div>
         </div>
     </div>
   )

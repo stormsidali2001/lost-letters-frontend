@@ -52,7 +52,7 @@ const FriendsSuggestions = () => {
     },
     {
       fullname:'Petr Sevcovic',
-      profilImgUrl:'Petr Sevcovic',
+      profilImgUrl:'Petr Sevcovic.jpg',
       description:"descriptive text about me this text is supposed to introduce my self brievely",
       coverImgUrl:'cover-moon.jpg',
       isOnline:Math.random() > 0.5 ? true:false

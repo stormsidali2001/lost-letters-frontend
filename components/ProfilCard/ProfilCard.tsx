@@ -1,13 +1,13 @@
 import styles from './ProfilCard.module.css';
 interface PropType{
-    title:string;
+    fullname:string;
     description:string;
     profilImageUrl:string;
     coverImgUrl:string;
     isOnline:boolean;
     
 }
-const ProfilCard = ({title,description,profilImageUrl,coverImgUrl,isOnline}:PropType)=>{
+const ProfilCard = ({fullname,description,profilImageUrl,coverImgUrl,isOnline}:PropType)=>{
     return(
         <div className={styles.card}>
             <div className={styles.cover}>
@@ -17,7 +17,7 @@ const ProfilCard = ({title,description,profilImageUrl,coverImgUrl,isOnline}:Prop
                 <img src={profilImageUrl}/>
                 <div className={`${styles.onlineCircle} ${isOnline ? styles.online: styles.offline}`}></div>
             </div>
-            <div className={styles.title}>{title}</div>
+            <div className={styles.title}>{fullname}</div>
             <p className={styles.description}>{description}</p>
             <div className={styles.buttons}>
                 <button>Profil</button>

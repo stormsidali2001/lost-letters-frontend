@@ -41,6 +41,12 @@ const Rightbar = () => {
             })
           }
         </ul>
+        <div className={styles.showMoreButton}>Show More</div>
+        <hr className={styles.separator}/>
+        <div className={styles.heading}>Ads</div>
+        <div className={styles.advertisementContainer}>
+          <img src='ad.jpg'/>
+        </div>
 
 
       </div>

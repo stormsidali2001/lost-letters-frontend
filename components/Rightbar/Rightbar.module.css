@@ -27,7 +27,8 @@
     display: flex;
     flex-direction: column;
     row-gap: 10px;
-    padding: 20px;
+    padding: 7px 20px;
+    margin-top: 20px;
 }
 .container .wrapper .friendsContainer .friend{
     display: flex;
@@ -56,5 +57,37 @@
     background-color:#787E78;
  }
 .container .wrapper .friendsContainer .friend .fullname {
-    color:var(--text-color)
+    color:var(--text-color);
+}
+
+.container .wrapper .showMoreButton{
+    color:var(--text-color);
+    border:none;
+    outline: none;
+    background-color: transparent;
+    text-align: center;
+    font-size: 12.25px;
+}
+.container .wrapper .showMoreButton:hover{
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.container .wrapper .separator{
+    width: 80%;
+    margin: 10px auto 20px auto;
+    color:var(--text-color);
+   
+}
+.container .wrapper .advertisementContainer {
+    width: 90%;
+    height: 212px;
+    margin: 0 auto;
+    border-radius: 20px;
+}
+.container .wrapper .advertisementContainer img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: inherit;
 }

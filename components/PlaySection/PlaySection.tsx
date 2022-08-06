@@ -36,14 +36,14 @@ const PlaySection = () => {
             <div className={styles.gameTypeContainer}>
                 <div className={styles.random}>
                     <div className={styles.heading}>Random Game</div>
-                    <div className={styles.wrapper}>
+                    <div className={styles.contentWrapper}>
                         <div className={styles.imageContainer}>
                             <img src=''/>
                         </div>
                         <button className={styles.playButton}>Play</button>
                     </div>
                 </div>
-                
+                <hr className={styles.separator}/>
                 <div className={styles.withFriends}>
                     <div className={styles.heading}>Online Friends</div>
                     <ul className={styles.friends}>
@@ -51,14 +51,14 @@ const PlaySection = () => {
                             onlineFriends.map(({fullname,imageUrl},index)=>{
                                 return(
                                     <li key={index} className={styles.friend}>
-                                    <div className={styles.profilImgContainer}>
-                                      <img src={imageUrl}/>
-                                      <div className={`${styles.onlineIndicator} ${styles.online}`}></div>
-                                    </div>
-                                    <div className={styles.content}>
-                                        <div className={styles.fullname}>{fullname}</div>
-                                        <div className={styles.buttons}></div>
-                                    </div>
+                                        <div className={styles.profilImgContainer}>
+                                        <img src={imageUrl}/>
+                                        <div className={`${styles.onlineIndicator} ${styles.online}`}></div>
+                                        </div>
+                                        <div className={styles.content}>
+                                            <div className={styles.fullname}>{fullname}</div>
+                                            <div className={styles.buttons}></div>
+                                        </div>
                                   </li>
                                 )
                             })

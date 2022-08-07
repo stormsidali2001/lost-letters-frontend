@@ -19,8 +19,8 @@ const Game = () => {
             level:32,
             hp:0.8,
             exp:0.5,
-            word:'sidali',
-            description:"think of a savage animal who run at high spped"
+            word:'courageous',
+            description:"a man who can sacrifice his self for others"
     };
     
   return (
@@ -36,6 +36,8 @@ const Game = () => {
                             hp={oponent.hp}
                             level={oponent.level}
                             profilImgUrl = {oponent.profilImgUrl}
+                            description={oponent.description}
+                            word = {oponent.word}
                         />
                         <div className={styles.rightCanvasContainer}></div>
                     </div>
@@ -47,7 +49,9 @@ const Game = () => {
                              hp={player.hp}
                              level={player.level}
                              profilImgUrl = {player.profilImgUrl}
+                             description={player.description}
                              reversed = {true}
+                             word = {player.word}
                         />
                     <div className={styles.rightCanvasContainer}></div>
                 </div>

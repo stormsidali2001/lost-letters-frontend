@@ -2,14 +2,14 @@
     background-color: #F3FAF2;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     width: 50%;
-    height: 50px;
+    height: 70%;
     position: relative;
     display: flex;
     align-items: center;
     column-gap: 10px;
     border-radius: 21px;
-    padding: 5px;
-    --progress-bar-width: 60px;
+    padding: 10px;
+    --progress-bar-width: 120px;
     --progress-bar-height: 3px;
 }
 

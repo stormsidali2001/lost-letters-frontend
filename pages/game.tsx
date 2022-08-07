@@ -26,10 +26,14 @@ const Game = () => {
         <TopbarUser/>
         <main className={styles.main}>
             <div className={styles.wrapper}>
-                <div className={styles.top}></div>
+                <div className={styles.top}>
+                    <div className={styles.leftCanvasContainer}></div>
+                        <GamePlayerArea/>
+                        <div className={styles.rightCanvasContainer}></div>
+                    </div>
                 <div className={styles.bottom}>
                     <div className={styles.leftCanvasContainer}></div>
-                    <GamePlayerArea/>
+                        <GamePlayerArea/>
                     <div className={styles.rightCanvasContainer}></div>
                 </div>
             </div>

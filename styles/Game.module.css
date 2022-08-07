@@ -4,11 +4,42 @@
     overflow: hidden;
   }
   
-  .container .main{
+.container .main{
     display: flex;
     width: 100vw;
-    height: 100vh;
+    height: calc(100vh - var(--topbar-height));
     justify-content: center;
-    padding-top:calc(var(--topbar-height) + 10px);
+    margin-top:calc(var(--topbar-height));
+    align-items: center;
+
   
   }
+
+.wrapper{
+    width: 70vw;
+    height: 80vh;
+    border: 3px dashed var(--green-900);
+    border-radius: 18px;
+    display: flex;
+    flex-direction: column;
+}
+.wrapper .top{
+    border-bottom: 3px dashed var(--green-900);
+}
+.wrapper .top,.bottom{
+    flex:1;
+    display: flex;
+}
+.wrapper .top .leftCanvasContainer{
+    flex:1;
+}
+.wrapper .top .rightCanvasContainer{
+    flex:1;
+}
+
+.wrapper .bottom .leftCanvasContainer{
+    flex:1;
+}
+.wrapper .bottom .rightCanvasContainer{
+    flex:1;
+}

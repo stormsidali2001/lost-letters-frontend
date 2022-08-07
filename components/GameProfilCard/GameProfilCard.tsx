@@ -1,6 +1,6 @@
 import styles from './GameProfilCard.module.css';
 
-interface PropType{
+export interface GameProfilCardProps{
     fullname:string;
     hp:number;
     exp:number;
@@ -8,7 +8,7 @@ interface PropType{
     profilImgUrl:string;
 
 }
-const GameProfilCard = ({fullname,hp,exp,level,profilImgUrl}:PropType) => {
+const GameProfilCard = ({fullname,hp,exp,level,profilImgUrl}:GameProfilCardProps) => {
   return (
     <div className={styles.container}>
         <div className={styles.profilImgContainer}>
@@ -17,19 +17,19 @@ const GameProfilCard = ({fullname,hp,exp,level,profilImgUrl}:PropType) => {
         <div className={styles.content}>
             <div className={styles.fullname}>{fullname}</div>
             <div className={styles.bars}>
-                <div className={styles.bar}>
+                <div className={styles.hpBar}>
                     <label>Hp</label>
-                    <progress/>
-                    <label>Exp</label>
+                    <progress value={hp*100} max={100}></progress>
+                    <label>{hp*100}%</label>
                 </div>
-                <div className={styles.bar}>
-                    <label>Hp</label>
-                    <progress/>
+                <div className={styles.expBar}>
                     <label>Exp</label>
+                    <progress value={exp*100} max={100}></progress>
+                    <label>{exp*100}%</label>
                 </div>
             </div>
         </div>
-        <span>lvl {fullname}</span>
+        <span className={styles.level}>lvl {level}</span>
 
 
     </div>

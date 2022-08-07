@@ -19,7 +19,7 @@ const GamePlayerArea = ({exp,fullname,hp,level,profilImgUrl,reversed = false}:Ga
         <div className={styles.wrapper}>
           <WordViewer
             word = 'sidali'
-            currentLetter = {0}
+            currentLetter = {1}
           />
         </div>
         <div className={styles.wrapper}>

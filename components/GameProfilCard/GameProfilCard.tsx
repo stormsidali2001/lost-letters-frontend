@@ -1,13 +1,21 @@
 import styles from './GameProfilCard.module.css';
 
-const GameProfilCard = () => {
+interface PropType{
+    fullname:string;
+    hp:number;
+    exp:number;
+    level:number;
+    profilImgUrl:string;
+
+}
+const GameProfilCard = ({fullname,hp,exp,level,profilImgUrl}:PropType) => {
   return (
     <div className={styles.container}>
         <div className={styles.profilImgContainer}>
-            <img src=''  />
+            <img src={profilImgUrl}  />
         </div>
         <div className={styles.content}>
-            <div className={styles.title}></div>
+            <div className={styles.fullname}>{fullname}</div>
             <div className={styles.bars}>
                 <div className={styles.bar}>
                     <label>Hp</label>
@@ -21,7 +29,7 @@ const GameProfilCard = () => {
                 </div>
             </div>
         </div>
-        <span>lvl 32</span>
+        <span>lvl {fullname}</span>
 
 
     </div>

@@ -8,7 +8,14 @@ const WordViewer = ({word,currentLetter}:PropType) => {
   return (
     <div className={styles.container}>
         <ul>
-
+            {
+                word.split('').map((ch,index)=>{
+                    const isCurrentLetter = (index+1) === currentLetter;
+                    return(
+                        <li className={styles.letter}>{isCurrentLetter?ch:""}</li>
+                    )
+                })
+            }
         </ul>
     </div>
   )

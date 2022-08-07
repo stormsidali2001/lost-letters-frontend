@@ -1,19 +1,23 @@
 .container{
     background-color: #F3FAF2;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    width: 80%;
-    height: 92px;
+    width: 50%;
+    height: 50px;
     position: relative;
     display: flex;
     align-items: center;
     column-gap: 10px;
     border-radius: 21px;
     padding: 5px;
+    --progress-bar-width: 60px;
+    --progress-bar-height: 3px;
 }
+
 .container .profilImgContainer{
-    width: 67px;
-    height: 67px;
+    width: 40px;
+    height: 40px;
     border-radius: 50%;
+    border: 2px solid var(--green-900);
 }
 .container .profilImgContainer img{
     width: 100%;
@@ -26,19 +30,31 @@
 }
 .container .content .fullname{
     text-align: center;
-    color:var(--text-color)
+    color:var(--text-color);
+    font-size: 13px;
+    font-weight: 500;
+
+}
+.container .content .bars{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 .container .content .bars .hpBar{
     display: flex;
     align-items: center;
     column-gap:5px;
 }
-
+.container .content .bars .hpBar label{
+    font-size: 12px;
+}
 .container .content .hpBar progress[value]{
     appearance: none;
-    height: 5px;
+    height: var(--progress-bar-height);
+    width: var(--progress-bar-width);
     border-radius: 20px;
 }
+
 .container .content .hpBar progress[value]::-webkit-progress-bar {
     background-color: rgba(95, 163, 91, 0.56);
     border-radius: 2px;
@@ -52,10 +68,14 @@
     align-items: center;
     column-gap:5px;
 }
+.container .content .bars .expBar label{
+    font-size: 12px;
+}
 
 .container .content .expBar progress[value]{
     appearance: none;
-    height: 5px;
+    width: var(--progress-bar-width); 
+    height: var(--progress-bar-height);
     border-radius: 20px;
 }
 .container .content .expBar progress[value]::-webkit-progress-bar {
@@ -69,6 +89,8 @@
 
 .container .level{
     position: absolute;
-    right:5px;
-    bottom: 5px;
+    right:10px;
+    bottom: 2px;
+    color:var(--text-color);
+    font-size: 12px;
 }

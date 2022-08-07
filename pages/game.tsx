@@ -47,6 +47,7 @@ const Game = () => {
                              hp={player.hp}
                              level={player.level}
                              profilImgUrl = {player.profilImgUrl}
+                             reversed = {true}
                         />
                     <div className={styles.rightCanvasContainer}></div>
                 </div>

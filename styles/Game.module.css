@@ -16,8 +16,8 @@
   }
 
 .wrapper{
-    width: 70vw;
-    height: 80vh;
+    width: 90vw;
+    height: 95%;
     border: 3px dashed var(--green-900);
     border-radius: 18px;
     display: flex;

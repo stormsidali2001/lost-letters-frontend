@@ -1,0 +1,15 @@
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    --cell-size:50px;
+}
+.container ul{
+    display: flex;
+    column-gap: 5px;
+}
+.container ul .letter{
+    background-color: #86BC83;
+    width: var(--cell-size);
+    height: var(--size);
+}

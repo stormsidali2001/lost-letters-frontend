@@ -38,7 +38,7 @@ const PlaySection = () => {
                     <div className={styles.heading}>Random Game</div>
                     <div className={styles.contentWrapper}>
                         <div className={styles.imageContainer}>
-                            <img src=''/>
+                            <img src='/dice.jpg'/>
                         </div>
                         <button className={styles.playButton}>Play</button>
                     </div>
@@ -57,7 +57,10 @@ const PlaySection = () => {
                                         </div>
                                         <div className={styles.content}>
                                             <div className={styles.fullname}>{fullname}</div>
-                                            <div className={styles.buttons}></div>
+                                            <div className={styles.buttons}>
+                                                <button className={styles.playButton}>Play</button>
+                                                <button className={styles.chatButton}>Chat</button>
+                                            </div>
                                         </div>
                                   </li>
                                 )

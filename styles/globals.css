@@ -1,12 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
 :root{
   --primary-900:#90C8AC;
+  --green-900:#5FA35B;
   --background:#F5F0BB;
   --text-color:#4D524B;
   --text-color-secondary:#525252;
   --topbar-height:60px;
   --letter-bg:rgba(115, 169, 173, 0.4);
   --form-bg:rgba(251, 243, 241, 0.63);
+  
 }
 html,
 body {

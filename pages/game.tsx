@@ -22,7 +22,35 @@ const Game = () => {
             word:'courageous',
             description:"a man who can sacrifice his self for others"
     };
-    
+    function random(min:number,max:number,floor:boolean = true){
+        let res =  Math.random()*(max-min)+min;
+        if(floor) res = Math.floor(res);
+        return res;
+    }
+    function generateCircles(numCircles:number,descW:number,descH:number) {
+        const active:{x:number,y:number}[] = []
+       
+        const r = 17;
+        const k = 30;
+        const w = r / Math.sqrt(2);
+        
+        const rows = Math.floor((descW-70)/w);
+        const cols = Math.floor((descH-70)/w);
+        const grid:({x:number,y:number} |undefined)[] = []
+        for(let i = 0;i<rows*cols;i++){
+            grid[i] = undefined;
+        }
+        //chosing a random point in the grid
+        let x = descW/2
+        let y = descH/2
+        const col = Math.floor(y/w);
+        const row =  Math.floor(x/w);
+        const X0 = {x,y};
+
+      
+        grid[row*cols +col] = X0;
+        active.push(X0);
+      }
   return (
     <div className={styles.container}>
         <TopbarUser/>

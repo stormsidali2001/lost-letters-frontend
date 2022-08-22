@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "canvas": "^2.9.3",
     "gsap": "^3.10.4",
     "konva": "^8.3.11",
     "next": "12.2.3",

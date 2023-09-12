@@ -1,0 +1,74 @@
+
+name: componly-e06f6cb1-7b69-4efc-8f74-315cfd27418b-94191424-1ae0-4c0b-b5a5-52d482908f64
+
+on:
+  workflow_dispatch:
+   inputs:
+      commitName:
+        description: 'Custom commit name'
+        required: true
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        workspaces:
+          - ./
+
+    continue-on-error: true
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3.5.3
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v2.5.2
+        with:
+          node-version: 18
+
+      - name: Cache Yarn dependencies
+        uses: actions/cache@v2
+        with:
+          path: |
+            ~/.cache/yarn
+            {{matrix.workspaces}}}
+          key: yarn-${{ runner.os }}-${{ hashFiles('**/yarn.lock') }}
+          restore-keys: |
+            yarn-${{ runner.os }}-
+      - name: Install dependencies
+        id: install-dependencies
+        run: |
+        
+                echo -e "\n@componly:registry=https://npm.pkg.github.com/" >> .npmrc
+                echo //npm.pkg.github.com/:_authToken=${{ secrets.COMPONLY_NPM_AUTH_TOKEN }} >> .npmrc
+                if [[ "${{ matrix.workspaces}}" != "empty" ]]; then
+                    pwd
+                    pushd ${{ matrix.workspaces }} 
+                    yarn install --cache-folder ~/.cache/yarn --no-lockfile && yarn add @componly/core  @componly/cli  @componly/schemas  axios -D --no-lockfile --cache-folder ~/.cache/yarn
+                    popd
+                else
+                    echo "No workspaces to install. Running 'yarn install' in the root directory."
+                    yarn install --cache-folder ~/.cache/yarn --no-lockfile && yarn  add @componly/core  @componly/cli  @componly/schemas  axios -D --no-lockfile --cache-folder ~/.cache/yarn
+                fi
+      
+      - name: Scan
+        id: componly-scan
+        env:
+          COMMIT_NAME: ${{ github.event.head_commit.message || github.event.inputs.commitName }}
+          RUN_ID: ${{ github.run_id }}
+          COMMIT_HASH: ${{ github.sha }}
+          STEP_OUTCOME: ${{ steps.componly-scan.outcome }}
+          JOB_NAME: ${{ github.job }}
+          REPO_NAME: ${{ github.repository }}
+          WORKFLOW_NAME: ${{ github.workflow }}
+          COMPONLY_BACKEND_URL: https://60c0-105-235-136-204.ngrok-free.app
+          COMPONLY_CLI_ENV: development
+        run: |
+          ls -a 
+          cd  ${{ matrix.workspaces }}   
+          npx componly scan --cli-id=${{secrets.COMPONLY_API_KEY}} --cli-password="${{secrets.COMPONLY_API_SECRET}}" --config-path ./   --project  ./
+
